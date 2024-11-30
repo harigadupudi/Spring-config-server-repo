@@ -3,7 +3,7 @@ spring:
     name: Employee-service
 
   datasource:
-    url: jdbc:mysql://mysql:3310/testdb
+    url: jdbc:mysql://localhost:3310/testdb
     username: root
     password: root
   #    password: Haridiv@1317
