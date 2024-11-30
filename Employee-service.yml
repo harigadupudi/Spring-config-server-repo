@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: Employee-service
+
+  datasource:
+    url: jdbc:mysql://mysql:3310/testdb
+    username: root
+    password: root
+  #    password: Haridiv@1317
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+  profiles:
+    active: qa
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+accounts:
+  message: "Welcome to Employee service"
+  contact:
+    name: "Hari Krishna"
+    email: "GHK@gmail.com"
+  onCallSupport:
+    - 70321858
+    - 70321852
